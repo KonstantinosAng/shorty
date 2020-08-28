@@ -22,7 +22,7 @@ app.use(helmet());
 app.use(morgan('tiny'));
 app.use(cors());
 app.use(express.json());
-app.use(express.static('../client'));
+app.use(express.static('./public'));
 
 
 // app.get('/url/:id', (req, res) => {
