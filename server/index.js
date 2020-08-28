@@ -12,7 +12,7 @@ const schema = yup.object().shape({
 });
 
 require('dotenv').config();
-const db = monk(process.env.MONGO_URI);
+const db = monk(process.env.MONGODB_URI);
 const urls = db.get('urls');
 urls.createIndex({ slug: 1 }, {unique: true });
 
@@ -22,7 +22,7 @@ app.use(helmet());
 app.use(morgan('tiny'));
 app.use(cors());
 app.use(express.json());
-app.use(express.static('./public'));
+app.use(express.static('../client'));
 
 
 // app.get('/url/:id', (req, res) => {
