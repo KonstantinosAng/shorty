@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  text-align: center;
+}
+
+h1 {
+  padding-top: 2rem;
+}
+
+a {
+  cursor: pointer;
+  padding-top: 2rem;
+}
