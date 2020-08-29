@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(36, 36, 36);
+  text-align: center;
+  justify-content: space-evenly;
+  align-content: center;
+  --color_input: rgb(190, 190, 190);
+  --color_textarea: rgb(200, 200, 200);
+  --color_button: rgb(210, 210, 210);
+  --color_write: rgb(240, 240, 240);
+}
+
+h1 {
+  color: white;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+input, button {
+  margin-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+input[type="text"] {
+  font-size: 1rem;
+  height: 2rem;
+  width: 15rem;
+  padding-left: .5rem;
+  margin: 1rem auto;
+  cursor: text;
+  box-shadow: none;
+  background-color: var(--color_write);
+  border: 1.5px solid var(--color_input);
+  border-top: 0 none;
+  border-left: 0 none;
+  border-right: 0 none;
+}
+
+/* Chrome, Firefox, Opera, Safari 10.1+ */
+input::placeholder
+{
+  color: black;
+  opacity: 1;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 15px;
+}
+
+/* Internet Explorer 10-11 */
+input:-ms-input-placeholder
+{
+  color: black;
+  opacity: 1;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 15px;
+}
+
+/* Microsoft Edge */
+input::-ms-input-placeholder
+{
+  color: black;
+  opacity: 1;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 15px;
+}
+
+/* Change the white to any color ;) */
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active
+{
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+input[type="submit"], button
+{
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  height: 2rem;
+  width: 15rem;
+  background-color: var(--color_button);
+}
+
+#success, #url, #arrow {
+  display: none;
+  color: green;
+  margin-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a:link, a:active, a:hover, a:visited, a:focus {
+  color: green;
+  text-decoration: none;
+  display: flex;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+#failure {
+  display: none;
+  color: red;
+  margin-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
