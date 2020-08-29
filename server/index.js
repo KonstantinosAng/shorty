@@ -24,11 +24,6 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static('./public'));
 
-
-// app.get('/url/:id', (req, res) => {
-//   // TODO: get a short url by id
-// });
-
 app.get('/:id', async (req, res, next) => {
   const { id: slug } = req.params;
   try {
@@ -62,9 +57,9 @@ app.post('/url', async (req, res, next) => {
     const newUrl = {
       url,
       slug,
-    }
+    };
     const created = await urls.insert(newUrl);
-    res.json(created);
+    res.json(JSON.stringify(newUrl));
   } catch (error) {
     next(error); 
   }
