@@ -62,7 +62,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1> Piserver URL shortener </h1>
+      <h1> URL shortener </h1>
       <main>
         <form onSubmit={createURL}>
           <input type="text" name="url" placeholder="enter a URL" required></input>
