@@ -71,7 +71,7 @@ function App() {
           <h3 id="success"> URL successfully created at </h3>
           <h1 id="arrow"> ↓ </h1>
           <h3 id="url"> <a href={BASE_URL+responseAPI.slug}> {BASE_URL+responseAPI.slug} </a> </h3>
-          <h3 id="failure"> Creation failed: check that url is in format http://example.com or https://example.com and that the slug is unique </h3>
+          <h3 id="failure"> Creation failed: check that url is in format http://example.com or https://example.com and that the slug is unique! </h3>
         </form>
       </main>
     </div>
