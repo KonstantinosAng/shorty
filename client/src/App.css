@@ -4,7 +4,7 @@
 }
 
 body {
-  background-color: rgb(36, 36, 36);
+  background-color: rgb(60, 60, 60);
   text-align: center;
   align-content: center;
   display:flex; 
@@ -14,7 +14,7 @@ body {
   --color_input: black;
   --color_textarea: white;
   --color_button: green;
-  --color_write: rgb(36, 36, 36);
+  --color_write: rgb(60, 60, 60);
 }
 
 h1 {
