@@ -38,7 +38,8 @@ To create a production build, use npm run build.
 
 Also make sure that you have mongodb running locally for the url storing.
 
-Examples:
+## Examples
+
 <p align="center">
-    <img src="examples/ex1.png"/> 
+  <img src="examples/ex1.png" /> 
 </p>
