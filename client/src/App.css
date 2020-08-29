@@ -11,10 +11,10 @@ body {
   flex-direction:column; 
   justify-content:center;
   min-height:100vh;
-  --color_input: rgb(190, 190, 190);
-  --color_textarea: rgb(200, 200, 200);
-  --color_button: rgb(210, 210, 210);
-  --color_write: rgb(240, 240, 240);
+  --color_input: black;
+  --color_textarea: white;
+  --color_button: green;
+  --color_write: rgb(36, 36, 36);
 }
 
 h1 {
@@ -34,6 +34,7 @@ input, button {
 }
 
 input[type="text"] {
+  color: var(--color_textarea);
   font-size: 1rem;
   height: 2rem;
   width: 15rem;
@@ -51,7 +52,7 @@ input[type="text"] {
 /* Chrome, Firefox, Opera, Safari 10.1+ */
 input::placeholder
 {
-  color: black;
+  color: var(--color_textarea);
   opacity: 1;
   text-align: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -61,7 +62,7 @@ input::placeholder
 /* Internet Explorer 10-11 */
 input:-ms-input-placeholder
 {
-  color: black;
+  color: var(--color_textarea);
   opacity: 1;
   text-align: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -71,7 +72,7 @@ input:-ms-input-placeholder
 /* Microsoft Edge */
 input::-ms-input-placeholder
 {
-  color: black;
+  color: var(--color_textarea);
   opacity: 1;
   text-align: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -89,7 +90,7 @@ input[type="submit"], button
   font-weight: bold;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   border: none;
-  border-radius: 8px;
+  border-radius: .5rem;
   cursor: pointer;
   height: 2rem;
   width: 15rem;
