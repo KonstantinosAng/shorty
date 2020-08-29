@@ -6,7 +6,7 @@ Inspired by [Coding Garden](https://www.youtube.com/watch?v=gq5yubc1u18).
 
 ## Usage
 
-Inside the server folder execute the following command for the backend server to start
+Inside the server folder execute the following command for the backend server to start:
 ```
 npm run start
 ```
@@ -35,3 +35,7 @@ You can now view client in the browser.
 Note that the development build is not optimized.
 To create a production build, use npm run build.
 ```
+
+Also make sure that you have mongodb running locally for the url storing.
+
+Examples:
