@@ -36,7 +36,14 @@ Note that the development build is not optimized.
 To create a production build, use npm run build.
 ```
 
-Also make sure that you have mongodb running locally for the url storing.
+Also make sure that you have mongodb running locally for the url storing. For windows if you have installed
+mongodb server then run the following code from a terminal and leave it open.
+
+```
+mongod
+```
+
+If it is installed you will see a big output. More info in [MongoDB/Installation](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/).
 
 ## Examples
 
