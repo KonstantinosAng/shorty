@@ -5,7 +5,7 @@ A URL shortener app using express mongodb and react.js.
 Inspired by [Coding Garden](https://www.youtube.com/watch?v=gq5yubc1u18).
 
 <div align="center">
-  <h1><a href="http://kangelopoulos.ddns.net:8080/shorty"> DEMO </a></h1>
+  <h1><a href="https://constantine.dev:8080/shorty"> DEMO </a></h1>
 </div>
 
 ## Usage
