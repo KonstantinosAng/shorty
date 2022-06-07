@@ -19,6 +19,7 @@ RUN apk add --no-cache --virtual build-base \
     g++
 
 # Stage 2: Serve app
+COPY . .
 LABEL author="Konstantinos Angelopoulos"
 EXPOSE 9999
 CMD yarn start
