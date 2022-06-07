@@ -1,30 +1,35 @@
-const express = require('express');
-const cors = require('cors');
-const morgan = require('morgan');
-const helmet = require('helmet');
-const yup = require('yup');
-const { nanoid } = require('nanoid');
-const monk = require('monk');
+const express = require("express");
+const cors = require("cors");
+const morgan = require("morgan");
+const helmet = require("helmet");
+const yup = require("yup");
+const { nanoid } = require("nanoid");
+const monk = require("monk");
 
 const schema = yup.object().shape({
-  slug: yup.string().trim().matches(/[\w\-]/i),
+  slug: yup
+    .string()
+    .trim()
+    .matches(/[\w\-]/i),
   url: yup.string().trim().url().required(),
 });
 
-require('dotenv').config();
+require("dotenv").config();
 const db = monk(process.env.MONGODB_URI);
-const urls = db.get('urls');
-urls.createIndex({ slug: 1 }, {unique: true });
+const urls = db.get("urls");
+urls.createIndex({ slug: 1 }, { unique: true });
+
+const basePath = "/shortyAPI";
 
 const app = express();
 
 app.use(helmet());
-app.use(morgan('tiny'));
+app.use(morgan("tiny"));
 app.use(cors());
 app.use(express.json());
-app.use(express.static('./public'));
+app.use(express.static("./public"));
 
-app.get('/:id', async (req, res, next) => {
+app.get(`${basePath}/:id`, async (req, res, next) => {
   const { id: slug } = req.params;
   try {
     const url = await urls.findOne({ slug });
@@ -38,21 +43,20 @@ app.get('/:id', async (req, res, next) => {
   }
 });
 
-
-app.post('/url', async (req, res, next) => {
+app.post(`${basePath}/url`, async (req, res, next) => {
   let { slug, url } = req.body;
   try {
     await schema.validate({
       slug,
       url,
-    })
+    });
     if (!slug) {
       slug = nanoid(5);
     } else {
       const existing = await urls.findOne({ slug });
       if (existing) {
-        throw new Error('Slug in use.');
-      } 
+        throw new Error("Slug in use.");
+      }
     }
     slug = slug.toLowerCase();
     const newUrl = {
@@ -62,7 +66,7 @@ app.post('/url', async (req, res, next) => {
     const created = await urls.insert(newUrl);
     res.json(JSON.stringify(newUrl));
   } catch (error) {
-    next(error); 
+    next(error);
   }
 });
 
@@ -74,13 +78,12 @@ app.use((error, req, res, next) => {
   }
   res.json({
     message: error.message,
-    stack: process.env.NODE_ENV === 'production' ? '❌' : error.stack,
+    stack: process.env.NODE_ENV === "production" ? "❌" : error.stack,
   });
 });
 
-PORT = process.env.PORT || 9999;
+const PORT = process.env.PORT || 9999;
 
 app.listen(PORT, () => {
-  console.log(`Listening at http://localhost:${PORT}`);
+  console.log(`Listening at http://localhost:${PORT}${basePath}`);
 });
-
