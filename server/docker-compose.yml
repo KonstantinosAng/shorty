@@ -1,0 +1,17 @@
+version: "2.2"
+services:
+  shorty_api:
+    # network_mode: "host"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: shorty_api
+    container_name: shorty_api
+    restart: always
+    ports:
+      - 9999:9999
+    environment:
+      # env_file:
+      #   - ./.env
+      - MONGODB_URI=localhost/piserver
+      - PORT=9999
