@@ -5,12 +5,15 @@ A URL shortener app using express mongodb and react.js.
 Inspired by [Coding Garden](https://www.youtube.com/watch?v=gq5yubc1u18).
 
 <div align="center">
-  <h1><a href="https://constantine.dev:8080/shorty"> DEMO </a></h1>
+  <h1><a href="https://shorty.constantine.dev"> DEMO </a></h1>
 </div>
+
+Backend deployed to -> https://short-urls.herokuapp.com/
 
 ## Usage
 
 Inside the server folder execute the following command for the backend server to start:
+
 ```
 npm run start
 ```
@@ -26,6 +29,7 @@ Inside the client folder execute the following command to start the front - end:
 ```
 npm start
 ```
+
 You should see the following lines:
 
 ```
