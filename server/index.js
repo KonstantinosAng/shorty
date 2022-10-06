@@ -19,7 +19,7 @@ const db = monk(process.env.MONGODB_URI);
 const urls = db.get("urls");
 urls.createIndex({ slug: 1 }, { unique: true });
 
-const basePath = "/shortyAPI";
+const basePath = "";
 
 const app = express();
 
