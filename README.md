@@ -53,6 +53,16 @@ mongod
 
 If it is installed you will see a big output. More info in [MongoDB/Installation](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/).
 
+## Deploy backend to Heroku
+
+From the root of the repo
+
+```bash
+heroku create -a short-urls
+heroku git:remote -a short-urls
+git subtree push --prefix server heroku master
+```
+
 ## Examples
 
 <p align="center">
