@@ -70,6 +70,10 @@ heroku config:set MONGODB_URI=joesmith
 heroku config:set PORT=9999
 ```
 
+## ATLAS MongoDB
+
+See instructions [`here`](https://gist.github.com/ross-u/b59ea6a1febefb80bffc15ecf31ea827) on how to setup a free atlas mongodb.
+
 ## Examples
 
 <p align="center">
