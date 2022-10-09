@@ -63,6 +63,13 @@ heroku git:remote -a short-urls
 git subtree push --prefix server heroku master
 ```
 
+Set up environmental configs
+
+```bash
+heroku config:set MONGODB_URI=joesmith
+heroku config:set PORT=9999
+```
+
 ## Examples
 
 <p align="center">
