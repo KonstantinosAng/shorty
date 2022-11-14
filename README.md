@@ -8,7 +8,9 @@ Inspired by [Coding Garden](https://www.youtube.com/watch?v=gq5yubc1u18).
   <h1><a href="https://shorty.constantine.dev"> DEMO </a></h1>
 </div>
 
-Backend deployed to -> https://short-urls.herokuapp.com/
+<!-- Backend deployed to -> https://short-urls.herokuapp.com/ -->
+
+Backend deployed to -> https://shorty-f6zh.onrender.com
 
 ## Usage
 
